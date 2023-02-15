@@ -1,0 +1,175 @@
+---
+title: "Regresión_lineal"
+format: html
+editor: visual
+author: data_T10
+---
+
+## Regresión lineal múltiple
+
+Importamos la base de datos limpia, con las observaciones exclusivamente correspondientes a Madrid:
+
+```{r}
+install.packages('RPostgreSQL')
+```
+
+```{r}
+library('RPostgreSQL')
+
+pg = dbDriver("PostgreSQL")
+
+con = dbConnect(pg, user="phmkeaeu", password="D-RiqEmcoViv8Sojo5L8ExxM9ufa0mkV",
+                 host="trumpet.db.elephantsql.com", port=5432, dbname="phmkeaeu")
+
+airbnb_list_complete = dbReadTable(con, "airbnb_list_complete")
+summary(airbnb_list_complete)
+
+```
+
+Estudio de la normalidad mediante histograma
+
+```{r}
+hist(airbnb_list_complete$Price)
+```
+
+Dividimos el dataset en dos, uno para train y otro para test:
+
+```{r}
+set.seed(123)
+idx <- sample(1:nrow(airbnb_list_complete), 0.7*nrow(airbnb_list_complete))
+datos_train_1 <- airbnb_list_complete[idx,]
+datos_test_1 <- airbnb_list_complete[-idx,]
+```
+
+Seleccionamos las varaibles de tipo numérico:
+
+```{r}
+library(dplyr)
+```
+
+```{r}
+datos_num = select(datos_train_1,Price,Accommodates,Bathrooms, Bedrooms, Beds,Square.Feet,Review.Scores.Rating)
+```
+
+Matriz de correlación para determinar que variables conforman el modelo:
+
+```{r}
+round(cor(datos_num, use="pairwise.complete.obs"),4)
+```
+
+Modelo_1:
+
+```{r}
+Modelo_1 <- lm(Price ~ Accommodates + Bathrooms + Bedrooms + Beds 
+               + Square.Feet, data = datos_train_1)
+summary(Modelo_1)
+```
+
+Modelo_2:
+
+```{r}
+Modelo_2 <- lm(Price ~ Accommodates + Bedrooms, data = datos_train_1)
+summary(Modelo_2)
+```
+
+Importamos cvs de barrios y renta:
+
+```{r}
+library(readr)
+barrios <- read_csv("barrios.csv")
+View(barrios)
+```
+
+La variable de referencia respecto a nuestra base de datos original es Neighbourhood.Cleansed Añadimos las nuevas columnas a nuestra base de datos inicial y repetimos proceso de dividir el dataset en dos.
+
+```{r}
+df_madrid_renta = merge(x= airbnb_list_complete, y= barrios)
+```
+
+```{r}
+set.seed(123)
+idx <- sample(1:nrow(df_madrid_renta), 0.7*nrow(df_madrid_renta))
+datos_train_2 <- df_madrid_renta[idx,]
+datos_test_2 <- df_madrid_renta[-idx,]
+```
+
+Nueva matriz de corrlación, ahora con las variables de renta.
+
+```{r}
+datos_num2 = select(datos_train_2,Price,Accommodates,Bathrooms, Bedrooms, Beds,Square.Feet,Renta_pers, Renta_hogar)
+```
+
+```{r}
+round(cor(datos_num2, use="pairwise.complete.obs"),4)
+```
+
+Modelo_3:
+
+```{r}
+Modelo_3 <- lm(Price ~ Accommodates + Bedrooms + Renta_pers, data = datos_train_2)
+summary(Modelo_3)
+```
+
+Añadimos la nueva varaible booleana:
+
+```{r}
+df_madrid = mutate(df_madrid_renta, Entire = ifelse(df_madrid_renta$Room.Type == "Entire home/apt",1,0),)
+View(df_madrid)
+```
+
+Repetimos el proceso de dividir el dataset:
+
+```{r}
+set.seed(123)
+idx <- sample(1:nrow(df_madrid), 0.7*nrow(df_madrid))
+datos_train <- df_madrid[idx,]
+datos_test <- df_madrid[-idx,]
+```
+
+Modelo_4
+
+```{r}
+Modelo_4 <- lm(Price ~ Accommodates + Bedrooms + Renta_pers + Entire,  data = datos_train)
+summary(Modelo_4)
+```
+
+Modelo_D (Modelo descriptivo)
+
+```{r}
+Modelo_D <- lm(log(Price) ~ Accommodates + Bedrooms +log(Renta_pers) + Entire, data = df_madrid )
+summary(Modelo_D)
+```
+
+```{r}
+Modelo_5 <- lm(log(Price) ~ Accommodates + Bedrooms + log(Renta_pers) + Entire, data = datos_train)
+summary(Modelo_5)
+```
+
+Prediccion:
+
+```{r}
+install.packages('caret')
+```
+
+```{r}
+install.packages('ggplot2')
+```
+
+```{r}
+install.packages('lattice')
+```
+
+```{r}
+library(caret)
+```
+
+```{r}
+datos_train$Price_Esti <- predict(Modelo_5,datos_train)
+caret::postResample(pred=datos_train$Price_Esti, obs= I(log10(datos_train$Price)))
+```
+
+```{r}
+datos_test$Price_Esti <- predict(Modelo_5,datos_test)
+caret::postResample(pred=datos_test$Price_Esti, obs= I(log10(datos_test$Price)))
+```
+
