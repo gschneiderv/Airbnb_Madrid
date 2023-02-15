@@ -13,6 +13,7 @@
     <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
     <SetMembershipControl />
     <SheetIdentifierTracking />
+    <VizInTooltipHideWorksheet />
     <WindowsPersistSimpleIdentifiers />
     <WorksheetBackgroundTransparency />
     <ZoneBackgroundTransparency />
@@ -34,132 +35,27 @@
             <connection authentication='username-password' class='postgres' dbname='phmkeaeu' one-time-sql='' port='5432' server='trumpet.db.elephantsql.com' username='phmkeaeu' />
           </named-connection>
         </named-connections>
-        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='postgres.1f8c0oq0yt0d9a1efl3hv1x3e3gr' name='airbnb_list' table='[public].[airbnb_list]' type='table' />
-        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
-          <relation connection='postgres.1f8c0oq0yt0d9a1efl3hv1x3e3gr' name='airbnb_list' table='[public].[airbnb_list]' type='table' />
-          <relation join='inner' type='join'>
-            <clause type='join'>
-              <expression op='='>
-                <expression op='[airbnb_list_complete].[Accommodates]' />
-                <expression op='[airbnb_list1].[Accommodates]' />
-              </expression>
-            </clause>
-            <relation connection='postgres.1f8c0oq0yt0d9a1efl3hv1x3e3gr' name='airbnb_list_complete' table='[public].[airbnb_list_complete]' type='table' />
-            <relation connection='postgres.1f8c0oq0yt0d9a1efl3hv1x3e3gr' name='airbnb_list1' table='[public].[airbnb_list]' type='table' />
-          </relation>
-        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
-        <cols>
-          <map key='[Accommodates (airbnb_list1)]' value='[airbnb_list1].[Accommodates]' />
-          <map key='[Accommodates (airbnb_list_complete)]' value='[airbnb_list_complete].[Accommodates]' />
-          <map key='[Accommodates]' value='[airbnb_list].[Accommodates]' />
-          <map key='[Amenities (airbnb_list1)]' value='[airbnb_list1].[Amenities]' />
-          <map key='[Amenities (airbnb_list_complete)]' value='[airbnb_list_complete].[Amenities]' />
-          <map key='[Amenities]' value='[airbnb_list].[Amenities]' />
-          <map key='[Bathrooms (airbnb_list1)]' value='[airbnb_list1].[Bathrooms]' />
-          <map key='[Bathrooms (airbnb_list_complete)]' value='[airbnb_list_complete].[Bathrooms]' />
-          <map key='[Bathrooms]' value='[airbnb_list].[Bathrooms]' />
-          <map key='[Bed Type (airbnb_list1)]' value='[airbnb_list1].[Bed Type]' />
-          <map key='[Bed Type (airbnb_list_complete)]' value='[airbnb_list_complete].[Bed Type]' />
-          <map key='[Bed Type]' value='[airbnb_list].[Bed Type]' />
-          <map key='[Bedrooms (airbnb_list1)]' value='[airbnb_list1].[Bedrooms]' />
-          <map key='[Bedrooms (airbnb_list_complete)]' value='[airbnb_list_complete].[Bedrooms]' />
-          <map key='[Bedrooms]' value='[airbnb_list].[Bedrooms]' />
-          <map key='[Beds (airbnb_list1)]' value='[airbnb_list1].[Beds]' />
-          <map key='[Beds (airbnb_list_complete)]' value='[airbnb_list_complete].[Beds]' />
-          <map key='[Beds]' value='[airbnb_list].[Beds]' />
-          <map key='[Cancellation Policy (airbnb_list1)]' value='[airbnb_list1].[Cancellation Policy]' />
-          <map key='[Cancellation Policy (airbnb_list_complete)]' value='[airbnb_list_complete].[Cancellation Policy]' />
-          <map key='[Cancellation Policy]' value='[airbnb_list].[Cancellation Policy]' />
-          <map key='[City (airbnb_list1)]' value='[airbnb_list1].[City]' />
-          <map key='[City (airbnb_list_complete)]' value='[airbnb_list_complete].[City]' />
-          <map key='[City]' value='[airbnb_list].[City]' />
-          <map key='[Cleaning Fee (airbnb_list1)]' value='[airbnb_list1].[Cleaning Fee]' />
-          <map key='[Cleaning Fee (airbnb_list_complete)]' value='[airbnb_list_complete].[Cleaning Fee]' />
-          <map key='[Cleaning Fee]' value='[airbnb_list].[Cleaning Fee]' />
-          <map key='[Country Code (airbnb_list1)]' value='[airbnb_list1].[Country Code]' />
-          <map key='[Country Code (airbnb_list_complete)]' value='[airbnb_list_complete].[Country Code]' />
-          <map key='[Country Code]' value='[airbnb_list].[Country Code]' />
-          <map key='[Extra People (airbnb_list1)]' value='[airbnb_list1].[Extra People]' />
-          <map key='[Extra People (airbnb_list_complete)]' value='[airbnb_list_complete].[Extra People]' />
-          <map key='[Extra People]' value='[airbnb_list].[Extra People]' />
-          <map key='[Guests Included (airbnb_list1)]' value='[airbnb_list1].[Guests Included]' />
-          <map key='[Guests Included (airbnb_list_complete)]' value='[airbnb_list_complete].[Guests Included]' />
-          <map key='[Guests Included]' value='[airbnb_list].[Guests Included]' />
-          <map key='[Latitude (airbnb_list1)]' value='[airbnb_list1].[Latitude]' />
-          <map key='[Latitude (airbnb_list_complete)]' value='[airbnb_list_complete].[Latitude]' />
-          <map key='[Latitude]' value='[airbnb_list].[Latitude]' />
-          <map key='[Longitude (airbnb_list1)]' value='[airbnb_list1].[Longitude]' />
-          <map key='[Longitude (airbnb_list_complete)]' value='[airbnb_list_complete].[Longitude]' />
-          <map key='[Longitude]' value='[airbnb_list].[Longitude]' />
-          <map key='[Maximum Nights (airbnb_list1)]' value='[airbnb_list1].[Maximum Nights]' />
-          <map key='[Maximum Nights (airbnb_list_complete)]' value='[airbnb_list_complete].[Maximum Nights]' />
-          <map key='[Maximum Nights]' value='[airbnb_list].[Maximum Nights]' />
-          <map key='[Minimum Nights (airbnb_list1)]' value='[airbnb_list1].[Minimum Nights]' />
-          <map key='[Minimum Nights (airbnb_list_complete)]' value='[airbnb_list_complete].[Minimum Nights]' />
-          <map key='[Minimum Nights]' value='[airbnb_list].[Minimum Nights]' />
-          <map key='[Neighbourhood Cleansed]' value='[airbnb_list_complete].[Neighbourhood Cleansed]' />
-          <map key='[Neighbourhood Group Cleansed (airbnb_list1)]' value='[airbnb_list1].[Neighbourhood Group Cleansed]' />
-          <map key='[Neighbourhood Group Cleansed (airbnb_list_complete)]' value='[airbnb_list_complete].[Neighbourhood Group Cleansed]' />
-          <map key='[Neighbourhood Group Cleansed]' value='[airbnb_list].[Neighbourhood Group Cleansed]' />
-          <map key='[Number of Reviews (airbnb_list1)]' value='[airbnb_list1].[Number of Reviews]' />
-          <map key='[Number of Reviews (airbnb_list_complete)]' value='[airbnb_list_complete].[Number of Reviews]' />
-          <map key='[Number of Reviews]' value='[airbnb_list].[Number of Reviews]' />
-          <map key='[Price (airbnb_list1)]' value='[airbnb_list1].[Price]' />
-          <map key='[Price (airbnb_list_complete)]' value='[airbnb_list_complete].[Price]' />
-          <map key='[Price]' value='[airbnb_list].[Price]' />
-          <map key='[Property Type (airbnb_list1)]' value='[airbnb_list1].[Property Type]' />
-          <map key='[Property Type (airbnb_list_complete)]' value='[airbnb_list_complete].[Property Type]' />
-          <map key='[Property Type]' value='[airbnb_list].[Property Type]' />
-          <map key='[Review Scores Rating (airbnb_list1)]' value='[airbnb_list1].[Review Scores Rating]' />
-          <map key='[Review Scores Rating (airbnb_list_complete)]' value='[airbnb_list_complete].[Review Scores Rating]' />
-          <map key='[Review Scores Rating]' value='[airbnb_list].[Review Scores Rating]' />
-          <map key='[Reviews per Month (airbnb_list1)]' value='[airbnb_list1].[Reviews per Month]' />
-          <map key='[Reviews per Month (airbnb_list_complete)]' value='[airbnb_list_complete].[Reviews per Month]' />
-          <map key='[Reviews per Month]' value='[airbnb_list].[Reviews per Month]' />
-          <map key='[Room Type (airbnb_list1)]' value='[airbnb_list1].[Room Type]' />
-          <map key='[Room Type (airbnb_list_complete)]' value='[airbnb_list_complete].[Room Type]' />
-          <map key='[Room Type]' value='[airbnb_list].[Room Type]' />
-          <map key='[Security Deposit (airbnb_list1)]' value='[airbnb_list1].[Security Deposit]' />
-          <map key='[Security Deposit (airbnb_list_complete)]' value='[airbnb_list_complete].[Security Deposit]' />
-          <map key='[Security Deposit]' value='[airbnb_list].[Security Deposit]' />
-          <map key='[Smart Location (airbnb_list1)]' value='[airbnb_list1].[Smart Location]' />
-          <map key='[Smart Location (airbnb_list_complete)]' value='[airbnb_list_complete].[Smart Location]' />
-          <map key='[Smart Location]' value='[airbnb_list].[Smart Location]' />
-          <map key='[Square Feet (airbnb_list1)]' value='[airbnb_list1].[Square Feet]' />
-          <map key='[Square Feet (airbnb_list_complete)]' value='[airbnb_list_complete].[Square Feet]' />
-          <map key='[Square Feet]' value='[airbnb_list].[Square Feet]' />
-          <map key='[State (airbnb_list1)]' value='[airbnb_list1].[State]' />
-          <map key='[State (airbnb_list_complete)]' value='[airbnb_list_complete].[State]' />
-          <map key='[State]' value='[airbnb_list].[State]' />
-          <map key='[Street (airbnb_list1)]' value='[airbnb_list1].[Street]' />
-          <map key='[Street (airbnb_list_complete)]' value='[airbnb_list_complete].[Street]' />
-          <map key='[Street]' value='[airbnb_list].[Street]' />
-          <map key='[Zipcode (airbnb_list1)]' value='[airbnb_list1].[Zipcode]' />
-          <map key='[Zipcode (airbnb_list_complete)]' value='[airbnb_list_complete].[Zipcode]' />
-          <map key='[Zipcode]' value='[airbnb_list].[Zipcode]' />
-          <map key='[index (airbnb_list1)]' value='[airbnb_list1].[index]' />
-          <map key='[index (airbnb_list_complete)]' value='[airbnb_list_complete].[index]' />
-          <map key='[index]' value='[airbnb_list].[index]' />
-        </cols>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='postgres.1f8c0oq0yt0d9a1efl3hv1x3e3gr' name='airbnb_list_complete' table='[public].[airbnb_list_complete]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='postgres.1f8c0oq0yt0d9a1efl3hv1x3e3gr' name='airbnb_list_complete' table='[public].[airbnb_list_complete]' type='table' />
         <metadata-records>
           <metadata-record class='column'>
             <remote-name>index</remote-name>
             <remote-type>20</remote-type>
             <local-name>[index]</local-name>
-            <parent-name>[airbnb_list]</parent-name>
+            <parent-name>[airbnb_list_complete]</parent-name>
             <remote-alias>index</remote-alias>
             <ordinal>1</ordinal>
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <precision>19</precision>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_305EF2A284454EB084F56499A8CA8E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_015C555224704ED089E3B2C30746A510]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Street</remote-name>
             <remote-type>129</remote-type>
             <local-name>[Street]</local-name>
-            <parent-name>[airbnb_list]</parent-name>
+            <parent-name>[airbnb_list_complete]</parent-name>
             <remote-alias>Street</remote-alias>
             <ordinal>2</ordinal>
             <local-type>string</local-type>
@@ -171,14 +67,14 @@
             <attributes>
               <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
             </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_305EF2A284454EB084F56499A8CA8E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_015C555224704ED089E3B2C30746A510]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>Neighbourhood Group Cleansed</remote-name>
+            <remote-name>Neighbourhood Cleansed</remote-name>
             <remote-type>129</remote-type>
-            <local-name>[Neighbourhood Group Cleansed]</local-name>
-            <parent-name>[airbnb_list]</parent-name>
-            <remote-alias>Neighbourhood Group Cleansed</remote-alias>
+            <local-name>[Neighbourhood Cleansed]</local-name>
+            <parent-name>[airbnb_list_complete]</parent-name>
+            <remote-alias>Neighbourhood Cleansed</remote-alias>
             <ordinal>3</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
@@ -189,14 +85,14 @@
             <attributes>
               <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
             </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_305EF2A284454EB084F56499A8CA8E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_015C555224704ED089E3B2C30746A510]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>City</remote-name>
+            <remote-name>Neighbourhood Group Cleansed</remote-name>
             <remote-type>129</remote-type>
-            <local-name>[City]</local-name>
-            <parent-name>[airbnb_list]</parent-name>
-            <remote-alias>City</remote-alias>
+            <local-name>[Neighbourhood Group Cleansed]</local-name>
+            <parent-name>[airbnb_list_complete]</parent-name>
+            <remote-alias>Neighbourhood Group Cleansed</remote-alias>
             <ordinal>4</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
@@ -207,14 +103,14 @@
             <attributes>
               <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
             </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_305EF2A284454EB084F56499A8CA8E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_015C555224704ED089E3B2C30746A510]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>State</remote-name>
+            <remote-name>City</remote-name>
             <remote-type>129</remote-type>
-            <local-name>[State]</local-name>
-            <parent-name>[airbnb_list]</parent-name>
-            <remote-alias>State</remote-alias>
+            <local-name>[City]</local-name>
+            <parent-name>[airbnb_list_complete]</parent-name>
+            <remote-alias>City</remote-alias>
             <ordinal>5</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
@@ -225,14 +121,14 @@
             <attributes>
               <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
             </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_305EF2A284454EB084F56499A8CA8E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_015C555224704ED089E3B2C30746A510]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>Zipcode</remote-name>
+            <remote-name>State</remote-name>
             <remote-type>129</remote-type>
-            <local-name>[Zipcode]</local-name>
-            <parent-name>[airbnb_list]</parent-name>
-            <remote-alias>Zipcode</remote-alias>
+            <local-name>[State]</local-name>
+            <parent-name>[airbnb_list_complete]</parent-name>
+            <remote-alias>State</remote-alias>
             <ordinal>6</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
@@ -243,14 +139,14 @@
             <attributes>
               <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
             </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_305EF2A284454EB084F56499A8CA8E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_015C555224704ED089E3B2C30746A510]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>Smart Location</remote-name>
+            <remote-name>Zipcode</remote-name>
             <remote-type>129</remote-type>
-            <local-name>[Smart Location]</local-name>
-            <parent-name>[airbnb_list]</parent-name>
-            <remote-alias>Smart Location</remote-alias>
+            <local-name>[Zipcode]</local-name>
+            <parent-name>[airbnb_list_complete]</parent-name>
+            <remote-alias>Zipcode</remote-alias>
             <ordinal>7</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
@@ -261,14 +157,14 @@
             <attributes>
               <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
             </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_305EF2A284454EB084F56499A8CA8E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_015C555224704ED089E3B2C30746A510]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>Country Code</remote-name>
+            <remote-name>Smart Location</remote-name>
             <remote-type>129</remote-type>
-            <local-name>[Country Code]</local-name>
-            <parent-name>[airbnb_list]</parent-name>
-            <remote-alias>Country Code</remote-alias>
+            <local-name>[Smart Location]</local-name>
+            <parent-name>[airbnb_list_complete]</parent-name>
+            <remote-alias>Smart Location</remote-alias>
             <ordinal>8</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
@@ -279,41 +175,15 @@
             <attributes>
               <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
             </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_305EF2A284454EB084F56499A8CA8E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_015C555224704ED089E3B2C30746A510]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>Latitude</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Latitude]</local-name>
-            <parent-name>[airbnb_list]</parent-name>
-            <remote-alias>Latitude</remote-alias>
-            <ordinal>9</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>17</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_305EF2A284454EB084F56499A8CA8E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Longitude</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Longitude]</local-name>
-            <parent-name>[airbnb_list]</parent-name>
-            <remote-alias>Longitude</remote-alias>
-            <ordinal>10</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>17</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_305EF2A284454EB084F56499A8CA8E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Property Type</remote-name>
+            <remote-name>Country Code</remote-name>
             <remote-type>129</remote-type>
-            <local-name>[Property Type]</local-name>
-            <parent-name>[airbnb_list]</parent-name>
-            <remote-alias>Property Type</remote-alias>
-            <ordinal>11</ordinal>
+            <local-name>[Country Code]</local-name>
+            <parent-name>[airbnb_list_complete]</parent-name>
+            <remote-alias>Country Code</remote-alias>
+            <ordinal>9</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
             <width>2147483647</width>
@@ -323,14 +193,40 @@
             <attributes>
               <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
             </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_305EF2A284454EB084F56499A8CA8E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_015C555224704ED089E3B2C30746A510]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>Room Type</remote-name>
+            <remote-name>Latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Latitude]</local-name>
+            <parent-name>[airbnb_list_complete]</parent-name>
+            <remote-alias>Latitude</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_015C555224704ED089E3B2C30746A510]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Longitude]</local-name>
+            <parent-name>[airbnb_list_complete]</parent-name>
+            <remote-alias>Longitude</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_015C555224704ED089E3B2C30746A510]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Property Type</remote-name>
             <remote-type>129</remote-type>
-            <local-name>[Room Type]</local-name>
-            <parent-name>[airbnb_list]</parent-name>
-            <remote-alias>Room Type</remote-alias>
+            <local-name>[Property Type]</local-name>
+            <parent-name>[airbnb_list_complete]</parent-name>
+            <remote-alias>Property Type</remote-alias>
             <ordinal>12</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
@@ -341,67 +237,15 @@
             <attributes>
               <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
             </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_305EF2A284454EB084F56499A8CA8E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_015C555224704ED089E3B2C30746A510]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>Accommodates</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Accommodates]</local-name>
-            <parent-name>[airbnb_list]</parent-name>
-            <remote-alias>Accommodates</remote-alias>
-            <ordinal>13</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>19</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_305EF2A284454EB084F56499A8CA8E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Bathrooms</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Bathrooms]</local-name>
-            <parent-name>[airbnb_list]</parent-name>
-            <remote-alias>Bathrooms</remote-alias>
-            <ordinal>14</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>17</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_305EF2A284454EB084F56499A8CA8E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Bedrooms</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Bedrooms]</local-name>
-            <parent-name>[airbnb_list]</parent-name>
-            <remote-alias>Bedrooms</remote-alias>
-            <ordinal>15</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>17</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_305EF2A284454EB084F56499A8CA8E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Beds</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Beds]</local-name>
-            <parent-name>[airbnb_list]</parent-name>
-            <remote-alias>Beds</remote-alias>
-            <ordinal>16</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>17</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_305EF2A284454EB084F56499A8CA8E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Bed Type</remote-name>
+            <remote-name>Room Type</remote-name>
             <remote-type>129</remote-type>
-            <local-name>[Bed Type]</local-name>
-            <parent-name>[airbnb_list]</parent-name>
-            <remote-alias>Bed Type</remote-alias>
-            <ordinal>17</ordinal>
+            <local-name>[Room Type]</local-name>
+            <parent-name>[airbnb_list_complete]</parent-name>
+            <remote-alias>Room Type</remote-alias>
+            <ordinal>13</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
             <width>2147483647</width>
@@ -411,14 +255,66 @@
             <attributes>
               <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
             </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_305EF2A284454EB084F56499A8CA8E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_015C555224704ED089E3B2C30746A510]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>Amenities</remote-name>
+            <remote-name>Accommodates</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Accommodates]</local-name>
+            <parent-name>[airbnb_list_complete]</parent-name>
+            <remote-alias>Accommodates</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_015C555224704ED089E3B2C30746A510]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Bathrooms</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Bathrooms]</local-name>
+            <parent-name>[airbnb_list_complete]</parent-name>
+            <remote-alias>Bathrooms</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_015C555224704ED089E3B2C30746A510]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Bedrooms</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Bedrooms]</local-name>
+            <parent-name>[airbnb_list_complete]</parent-name>
+            <remote-alias>Bedrooms</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_015C555224704ED089E3B2C30746A510]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Beds</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Beds]</local-name>
+            <parent-name>[airbnb_list_complete]</parent-name>
+            <remote-alias>Beds</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_015C555224704ED089E3B2C30746A510]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Bed Type</remote-name>
             <remote-type>129</remote-type>
-            <local-name>[Amenities]</local-name>
-            <parent-name>[airbnb_list]</parent-name>
-            <remote-alias>Amenities</remote-alias>
+            <local-name>[Bed Type]</local-name>
+            <parent-name>[airbnb_list_complete]</parent-name>
+            <remote-alias>Bed Type</remote-alias>
             <ordinal>18</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
@@ -429,145 +325,163 @@
             <attributes>
               <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
             </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_305EF2A284454EB084F56499A8CA8E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_015C555224704ED089E3B2C30746A510]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Amenities</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Amenities]</local-name>
+            <parent-name>[airbnb_list_complete]</parent-name>
+            <remote-alias>Amenities</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>2147483647</width>
+            <contains-null>true</contains-null>
+            <cast-to-local-type>true</cast-to-local-type>
+            <collation flag='0' name='LEN_RUS' />
+            <attributes>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_015C555224704ED089E3B2C30746A510]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Square Feet</remote-name>
             <remote-type>5</remote-type>
             <local-name>[Square Feet]</local-name>
-            <parent-name>[airbnb_list]</parent-name>
+            <parent-name>[airbnb_list_complete]</parent-name>
             <remote-alias>Square Feet</remote-alias>
-            <ordinal>19</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>17</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_305EF2A284454EB084F56499A8CA8E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Price</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Price]</local-name>
-            <parent-name>[airbnb_list]</parent-name>
-            <remote-alias>Price</remote-alias>
             <ordinal>20</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <precision>17</precision>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_305EF2A284454EB084F56499A8CA8E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_015C555224704ED089E3B2C30746A510]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>Security Deposit</remote-name>
+            <remote-name>Price</remote-name>
             <remote-type>5</remote-type>
-            <local-name>[Security Deposit]</local-name>
-            <parent-name>[airbnb_list]</parent-name>
-            <remote-alias>Security Deposit</remote-alias>
+            <local-name>[Price]</local-name>
+            <parent-name>[airbnb_list_complete]</parent-name>
+            <remote-alias>Price</remote-alias>
             <ordinal>21</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <precision>17</precision>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_305EF2A284454EB084F56499A8CA8E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_015C555224704ED089E3B2C30746A510]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>Cleaning Fee</remote-name>
+            <remote-name>Security Deposit</remote-name>
             <remote-type>5</remote-type>
-            <local-name>[Cleaning Fee]</local-name>
-            <parent-name>[airbnb_list]</parent-name>
-            <remote-alias>Cleaning Fee</remote-alias>
+            <local-name>[Security Deposit]</local-name>
+            <parent-name>[airbnb_list_complete]</parent-name>
+            <remote-alias>Security Deposit</remote-alias>
             <ordinal>22</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <precision>17</precision>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_305EF2A284454EB084F56499A8CA8E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_015C555224704ED089E3B2C30746A510]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Cleaning Fee</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Cleaning Fee]</local-name>
+            <parent-name>[airbnb_list_complete]</parent-name>
+            <remote-alias>Cleaning Fee</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>17</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_015C555224704ED089E3B2C30746A510]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Guests Included</remote-name>
             <remote-type>20</remote-type>
             <local-name>[Guests Included]</local-name>
-            <parent-name>[airbnb_list]</parent-name>
+            <parent-name>[airbnb_list_complete]</parent-name>
             <remote-alias>Guests Included</remote-alias>
-            <ordinal>23</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>19</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_305EF2A284454EB084F56499A8CA8E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Extra People</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Extra People]</local-name>
-            <parent-name>[airbnb_list]</parent-name>
-            <remote-alias>Extra People</remote-alias>
             <ordinal>24</ordinal>
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <precision>19</precision>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_305EF2A284454EB084F56499A8CA8E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_015C555224704ED089E3B2C30746A510]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>Minimum Nights</remote-name>
+            <remote-name>Extra People</remote-name>
             <remote-type>20</remote-type>
-            <local-name>[Minimum Nights]</local-name>
-            <parent-name>[airbnb_list]</parent-name>
-            <remote-alias>Minimum Nights</remote-alias>
+            <local-name>[Extra People]</local-name>
+            <parent-name>[airbnb_list_complete]</parent-name>
+            <remote-alias>Extra People</remote-alias>
             <ordinal>25</ordinal>
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <precision>19</precision>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_305EF2A284454EB084F56499A8CA8E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_015C555224704ED089E3B2C30746A510]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>Maximum Nights</remote-name>
+            <remote-name>Minimum Nights</remote-name>
             <remote-type>20</remote-type>
-            <local-name>[Maximum Nights]</local-name>
-            <parent-name>[airbnb_list]</parent-name>
-            <remote-alias>Maximum Nights</remote-alias>
+            <local-name>[Minimum Nights]</local-name>
+            <parent-name>[airbnb_list_complete]</parent-name>
+            <remote-alias>Minimum Nights</remote-alias>
             <ordinal>26</ordinal>
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <precision>19</precision>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_305EF2A284454EB084F56499A8CA8E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_015C555224704ED089E3B2C30746A510]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>Number of Reviews</remote-name>
+            <remote-name>Maximum Nights</remote-name>
             <remote-type>20</remote-type>
-            <local-name>[Number of Reviews]</local-name>
-            <parent-name>[airbnb_list]</parent-name>
-            <remote-alias>Number of Reviews</remote-alias>
+            <local-name>[Maximum Nights]</local-name>
+            <parent-name>[airbnb_list_complete]</parent-name>
+            <remote-alias>Maximum Nights</remote-alias>
             <ordinal>27</ordinal>
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <precision>19</precision>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_305EF2A284454EB084F56499A8CA8E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_015C555224704ED089E3B2C30746A510]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Number of Reviews</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Number of Reviews]</local-name>
+            <parent-name>[airbnb_list_complete]</parent-name>
+            <remote-alias>Number of Reviews</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_015C555224704ED089E3B2C30746A510]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Review Scores Rating</remote-name>
             <remote-type>5</remote-type>
             <local-name>[Review Scores Rating]</local-name>
-            <parent-name>[airbnb_list]</parent-name>
+            <parent-name>[airbnb_list_complete]</parent-name>
             <remote-alias>Review Scores Rating</remote-alias>
-            <ordinal>28</ordinal>
+            <ordinal>29</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <precision>17</precision>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_305EF2A284454EB084F56499A8CA8E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_015C555224704ED089E3B2C30746A510]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Cancellation Policy</remote-name>
             <remote-type>129</remote-type>
             <local-name>[Cancellation Policy]</local-name>
-            <parent-name>[airbnb_list]</parent-name>
+            <parent-name>[airbnb_list_complete]</parent-name>
             <remote-alias>Cancellation Policy</remote-alias>
-            <ordinal>29</ordinal>
+            <ordinal>30</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
             <width>2147483647</width>
@@ -577,1014 +491,53 @@
             <attributes>
               <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
             </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_305EF2A284454EB084F56499A8CA8E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_015C555224704ED089E3B2C30746A510]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
           <metadata-record class='column'>
             <remote-name>Reviews per Month</remote-name>
             <remote-type>5</remote-type>
             <local-name>[Reviews per Month]</local-name>
-            <parent-name>[airbnb_list]</parent-name>
-            <remote-alias>Reviews per Month</remote-alias>
-            <ordinal>30</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>17</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_305EF2A284454EB084F56499A8CA8E41]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>index</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[index (airbnb_list_complete)]</local-name>
-            <parent-name>[airbnb_list_complete]</parent-name>
-            <remote-alias>index</remote-alias>
-            <ordinal>32</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>19</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Street</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[Street (airbnb_list_complete)]</local-name>
-            <parent-name>[airbnb_list_complete]</parent-name>
-            <remote-alias>Street</remote-alias>
-            <ordinal>33</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>2147483647</width>
-            <contains-null>true</contains-null>
-            <cast-to-local-type>true</cast-to-local-type>
-            <collation flag='0' name='LEN_RUS' />
-            <attributes>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Neighbourhood Cleansed</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[Neighbourhood Cleansed]</local-name>
-            <parent-name>[airbnb_list_complete]</parent-name>
-            <remote-alias>Neighbourhood Cleansed</remote-alias>
-            <ordinal>34</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>2147483647</width>
-            <contains-null>true</contains-null>
-            <cast-to-local-type>true</cast-to-local-type>
-            <collation flag='0' name='LEN_RUS' />
-            <attributes>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Neighbourhood Group Cleansed</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[Neighbourhood Group Cleansed (airbnb_list_complete)]</local-name>
-            <parent-name>[airbnb_list_complete]</parent-name>
-            <remote-alias>Neighbourhood Group Cleansed</remote-alias>
-            <ordinal>35</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>2147483647</width>
-            <contains-null>true</contains-null>
-            <cast-to-local-type>true</cast-to-local-type>
-            <collation flag='0' name='LEN_RUS' />
-            <attributes>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>City</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[City (airbnb_list_complete)]</local-name>
-            <parent-name>[airbnb_list_complete]</parent-name>
-            <remote-alias>City</remote-alias>
-            <ordinal>36</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>2147483647</width>
-            <contains-null>true</contains-null>
-            <cast-to-local-type>true</cast-to-local-type>
-            <collation flag='0' name='LEN_RUS' />
-            <attributes>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>State</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[State (airbnb_list_complete)]</local-name>
-            <parent-name>[airbnb_list_complete]</parent-name>
-            <remote-alias>State</remote-alias>
-            <ordinal>37</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>2147483647</width>
-            <contains-null>true</contains-null>
-            <cast-to-local-type>true</cast-to-local-type>
-            <collation flag='0' name='LEN_RUS' />
-            <attributes>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Zipcode</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[Zipcode (airbnb_list_complete)]</local-name>
-            <parent-name>[airbnb_list_complete]</parent-name>
-            <remote-alias>Zipcode</remote-alias>
-            <ordinal>38</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>2147483647</width>
-            <contains-null>true</contains-null>
-            <cast-to-local-type>true</cast-to-local-type>
-            <collation flag='0' name='LEN_RUS' />
-            <attributes>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Smart Location</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[Smart Location (airbnb_list_complete)]</local-name>
-            <parent-name>[airbnb_list_complete]</parent-name>
-            <remote-alias>Smart Location</remote-alias>
-            <ordinal>39</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>2147483647</width>
-            <contains-null>true</contains-null>
-            <cast-to-local-type>true</cast-to-local-type>
-            <collation flag='0' name='LEN_RUS' />
-            <attributes>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Country Code</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[Country Code (airbnb_list_complete)]</local-name>
-            <parent-name>[airbnb_list_complete]</parent-name>
-            <remote-alias>Country Code</remote-alias>
-            <ordinal>40</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>2147483647</width>
-            <contains-null>true</contains-null>
-            <cast-to-local-type>true</cast-to-local-type>
-            <collation flag='0' name='LEN_RUS' />
-            <attributes>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Latitude</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Latitude (airbnb_list_complete)]</local-name>
-            <parent-name>[airbnb_list_complete]</parent-name>
-            <remote-alias>Latitude</remote-alias>
-            <ordinal>41</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>17</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Longitude</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Longitude (airbnb_list_complete)]</local-name>
-            <parent-name>[airbnb_list_complete]</parent-name>
-            <remote-alias>Longitude</remote-alias>
-            <ordinal>42</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>17</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Property Type</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[Property Type (airbnb_list_complete)]</local-name>
-            <parent-name>[airbnb_list_complete]</parent-name>
-            <remote-alias>Property Type</remote-alias>
-            <ordinal>43</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>2147483647</width>
-            <contains-null>true</contains-null>
-            <cast-to-local-type>true</cast-to-local-type>
-            <collation flag='0' name='LEN_RUS' />
-            <attributes>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Room Type</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[Room Type (airbnb_list_complete)]</local-name>
-            <parent-name>[airbnb_list_complete]</parent-name>
-            <remote-alias>Room Type</remote-alias>
-            <ordinal>44</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>2147483647</width>
-            <contains-null>true</contains-null>
-            <cast-to-local-type>true</cast-to-local-type>
-            <collation flag='0' name='LEN_RUS' />
-            <attributes>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Accommodates</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Accommodates (airbnb_list_complete)]</local-name>
-            <parent-name>[airbnb_list_complete]</parent-name>
-            <remote-alias>Accommodates</remote-alias>
-            <ordinal>45</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>19</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Bathrooms</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Bathrooms (airbnb_list_complete)]</local-name>
-            <parent-name>[airbnb_list_complete]</parent-name>
-            <remote-alias>Bathrooms</remote-alias>
-            <ordinal>46</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>17</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Bedrooms</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Bedrooms (airbnb_list_complete)]</local-name>
-            <parent-name>[airbnb_list_complete]</parent-name>
-            <remote-alias>Bedrooms</remote-alias>
-            <ordinal>47</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>17</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Beds</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Beds (airbnb_list_complete)]</local-name>
-            <parent-name>[airbnb_list_complete]</parent-name>
-            <remote-alias>Beds</remote-alias>
-            <ordinal>48</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>17</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Bed Type</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[Bed Type (airbnb_list_complete)]</local-name>
-            <parent-name>[airbnb_list_complete]</parent-name>
-            <remote-alias>Bed Type</remote-alias>
-            <ordinal>49</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>2147483647</width>
-            <contains-null>true</contains-null>
-            <cast-to-local-type>true</cast-to-local-type>
-            <collation flag='0' name='LEN_RUS' />
-            <attributes>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Amenities</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[Amenities (airbnb_list_complete)]</local-name>
-            <parent-name>[airbnb_list_complete]</parent-name>
-            <remote-alias>Amenities</remote-alias>
-            <ordinal>50</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>2147483647</width>
-            <contains-null>true</contains-null>
-            <cast-to-local-type>true</cast-to-local-type>
-            <collation flag='0' name='LEN_RUS' />
-            <attributes>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Square Feet</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Square Feet (airbnb_list_complete)]</local-name>
-            <parent-name>[airbnb_list_complete]</parent-name>
-            <remote-alias>Square Feet</remote-alias>
-            <ordinal>51</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>17</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Price</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Price (airbnb_list_complete)]</local-name>
-            <parent-name>[airbnb_list_complete]</parent-name>
-            <remote-alias>Price</remote-alias>
-            <ordinal>52</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>17</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Security Deposit</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Security Deposit (airbnb_list_complete)]</local-name>
-            <parent-name>[airbnb_list_complete]</parent-name>
-            <remote-alias>Security Deposit</remote-alias>
-            <ordinal>53</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>17</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Cleaning Fee</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Cleaning Fee (airbnb_list_complete)]</local-name>
-            <parent-name>[airbnb_list_complete]</parent-name>
-            <remote-alias>Cleaning Fee</remote-alias>
-            <ordinal>54</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>17</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Guests Included</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Guests Included (airbnb_list_complete)]</local-name>
-            <parent-name>[airbnb_list_complete]</parent-name>
-            <remote-alias>Guests Included</remote-alias>
-            <ordinal>55</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>19</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Extra People</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Extra People (airbnb_list_complete)]</local-name>
-            <parent-name>[airbnb_list_complete]</parent-name>
-            <remote-alias>Extra People</remote-alias>
-            <ordinal>56</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>19</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Minimum Nights</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Minimum Nights (airbnb_list_complete)]</local-name>
-            <parent-name>[airbnb_list_complete]</parent-name>
-            <remote-alias>Minimum Nights</remote-alias>
-            <ordinal>57</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>19</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Maximum Nights</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Maximum Nights (airbnb_list_complete)]</local-name>
-            <parent-name>[airbnb_list_complete]</parent-name>
-            <remote-alias>Maximum Nights</remote-alias>
-            <ordinal>58</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>19</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Number of Reviews</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Number of Reviews (airbnb_list_complete)]</local-name>
-            <parent-name>[airbnb_list_complete]</parent-name>
-            <remote-alias>Number of Reviews</remote-alias>
-            <ordinal>59</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>19</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Review Scores Rating</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Review Scores Rating (airbnb_list_complete)]</local-name>
-            <parent-name>[airbnb_list_complete]</parent-name>
-            <remote-alias>Review Scores Rating</remote-alias>
-            <ordinal>60</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>17</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Cancellation Policy</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[Cancellation Policy (airbnb_list_complete)]</local-name>
-            <parent-name>[airbnb_list_complete]</parent-name>
-            <remote-alias>Cancellation Policy</remote-alias>
-            <ordinal>61</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>2147483647</width>
-            <contains-null>true</contains-null>
-            <cast-to-local-type>true</cast-to-local-type>
-            <collation flag='0' name='LEN_RUS' />
-            <attributes>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Reviews per Month</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Reviews per Month (airbnb_list_complete)]</local-name>
             <parent-name>[airbnb_list_complete]</parent-name>
             <remote-alias>Reviews per Month</remote-alias>
-            <ordinal>62</ordinal>
+            <ordinal>31</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <precision>17</precision>
             <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>index</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[index (airbnb_list1)]</local-name>
-            <parent-name>[airbnb_list1]</parent-name>
-            <remote-alias>index</remote-alias>
-            <ordinal>64</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>19</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Street</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[Street (airbnb_list1)]</local-name>
-            <parent-name>[airbnb_list1]</parent-name>
-            <remote-alias>Street</remote-alias>
-            <ordinal>65</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>2147483647</width>
-            <contains-null>true</contains-null>
-            <cast-to-local-type>true</cast-to-local-type>
-            <collation flag='0' name='LEN_RUS' />
-            <attributes>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Neighbourhood Group Cleansed</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[Neighbourhood Group Cleansed (airbnb_list1)]</local-name>
-            <parent-name>[airbnb_list1]</parent-name>
-            <remote-alias>Neighbourhood Group Cleansed</remote-alias>
-            <ordinal>66</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>2147483647</width>
-            <contains-null>true</contains-null>
-            <cast-to-local-type>true</cast-to-local-type>
-            <collation flag='0' name='LEN_RUS' />
-            <attributes>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>City</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[City (airbnb_list1)]</local-name>
-            <parent-name>[airbnb_list1]</parent-name>
-            <remote-alias>City</remote-alias>
-            <ordinal>67</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>2147483647</width>
-            <contains-null>true</contains-null>
-            <cast-to-local-type>true</cast-to-local-type>
-            <collation flag='0' name='LEN_RUS' />
-            <attributes>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>State</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[State (airbnb_list1)]</local-name>
-            <parent-name>[airbnb_list1]</parent-name>
-            <remote-alias>State</remote-alias>
-            <ordinal>68</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>2147483647</width>
-            <contains-null>true</contains-null>
-            <cast-to-local-type>true</cast-to-local-type>
-            <collation flag='0' name='LEN_RUS' />
-            <attributes>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Zipcode</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[Zipcode (airbnb_list1)]</local-name>
-            <parent-name>[airbnb_list1]</parent-name>
-            <remote-alias>Zipcode</remote-alias>
-            <ordinal>69</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>2147483647</width>
-            <contains-null>true</contains-null>
-            <cast-to-local-type>true</cast-to-local-type>
-            <collation flag='0' name='LEN_RUS' />
-            <attributes>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Smart Location</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[Smart Location (airbnb_list1)]</local-name>
-            <parent-name>[airbnb_list1]</parent-name>
-            <remote-alias>Smart Location</remote-alias>
-            <ordinal>70</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>2147483647</width>
-            <contains-null>true</contains-null>
-            <cast-to-local-type>true</cast-to-local-type>
-            <collation flag='0' name='LEN_RUS' />
-            <attributes>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Country Code</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[Country Code (airbnb_list1)]</local-name>
-            <parent-name>[airbnb_list1]</parent-name>
-            <remote-alias>Country Code</remote-alias>
-            <ordinal>71</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>2147483647</width>
-            <contains-null>true</contains-null>
-            <cast-to-local-type>true</cast-to-local-type>
-            <collation flag='0' name='LEN_RUS' />
-            <attributes>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Latitude</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Latitude (airbnb_list1)]</local-name>
-            <parent-name>[airbnb_list1]</parent-name>
-            <remote-alias>Latitude</remote-alias>
-            <ordinal>72</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>17</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Longitude</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Longitude (airbnb_list1)]</local-name>
-            <parent-name>[airbnb_list1]</parent-name>
-            <remote-alias>Longitude</remote-alias>
-            <ordinal>73</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>17</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Property Type</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[Property Type (airbnb_list1)]</local-name>
-            <parent-name>[airbnb_list1]</parent-name>
-            <remote-alias>Property Type</remote-alias>
-            <ordinal>74</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>2147483647</width>
-            <contains-null>true</contains-null>
-            <cast-to-local-type>true</cast-to-local-type>
-            <collation flag='0' name='LEN_RUS' />
-            <attributes>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Room Type</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[Room Type (airbnb_list1)]</local-name>
-            <parent-name>[airbnb_list1]</parent-name>
-            <remote-alias>Room Type</remote-alias>
-            <ordinal>75</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>2147483647</width>
-            <contains-null>true</contains-null>
-            <cast-to-local-type>true</cast-to-local-type>
-            <collation flag='0' name='LEN_RUS' />
-            <attributes>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Accommodates</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Accommodates (airbnb_list1)]</local-name>
-            <parent-name>[airbnb_list1]</parent-name>
-            <remote-alias>Accommodates</remote-alias>
-            <ordinal>76</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>19</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Bathrooms</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Bathrooms (airbnb_list1)]</local-name>
-            <parent-name>[airbnb_list1]</parent-name>
-            <remote-alias>Bathrooms</remote-alias>
-            <ordinal>77</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>17</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Bedrooms</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Bedrooms (airbnb_list1)]</local-name>
-            <parent-name>[airbnb_list1]</parent-name>
-            <remote-alias>Bedrooms</remote-alias>
-            <ordinal>78</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>17</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Beds</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Beds (airbnb_list1)]</local-name>
-            <parent-name>[airbnb_list1]</parent-name>
-            <remote-alias>Beds</remote-alias>
-            <ordinal>79</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>17</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Bed Type</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[Bed Type (airbnb_list1)]</local-name>
-            <parent-name>[airbnb_list1]</parent-name>
-            <remote-alias>Bed Type</remote-alias>
-            <ordinal>80</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>2147483647</width>
-            <contains-null>true</contains-null>
-            <cast-to-local-type>true</cast-to-local-type>
-            <collation flag='0' name='LEN_RUS' />
-            <attributes>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Amenities</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[Amenities (airbnb_list1)]</local-name>
-            <parent-name>[airbnb_list1]</parent-name>
-            <remote-alias>Amenities</remote-alias>
-            <ordinal>81</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>2147483647</width>
-            <contains-null>true</contains-null>
-            <cast-to-local-type>true</cast-to-local-type>
-            <collation flag='0' name='LEN_RUS' />
-            <attributes>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Square Feet</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Square Feet (airbnb_list1)]</local-name>
-            <parent-name>[airbnb_list1]</parent-name>
-            <remote-alias>Square Feet</remote-alias>
-            <ordinal>82</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>17</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Price</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Price (airbnb_list1)]</local-name>
-            <parent-name>[airbnb_list1]</parent-name>
-            <remote-alias>Price</remote-alias>
-            <ordinal>83</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>17</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Security Deposit</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Security Deposit (airbnb_list1)]</local-name>
-            <parent-name>[airbnb_list1]</parent-name>
-            <remote-alias>Security Deposit</remote-alias>
-            <ordinal>84</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>17</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Cleaning Fee</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Cleaning Fee (airbnb_list1)]</local-name>
-            <parent-name>[airbnb_list1]</parent-name>
-            <remote-alias>Cleaning Fee</remote-alias>
-            <ordinal>85</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>17</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Guests Included</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Guests Included (airbnb_list1)]</local-name>
-            <parent-name>[airbnb_list1]</parent-name>
-            <remote-alias>Guests Included</remote-alias>
-            <ordinal>86</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>19</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Extra People</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Extra People (airbnb_list1)]</local-name>
-            <parent-name>[airbnb_list1]</parent-name>
-            <remote-alias>Extra People</remote-alias>
-            <ordinal>87</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>19</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Minimum Nights</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Minimum Nights (airbnb_list1)]</local-name>
-            <parent-name>[airbnb_list1]</parent-name>
-            <remote-alias>Minimum Nights</remote-alias>
-            <ordinal>88</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>19</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Maximum Nights</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Maximum Nights (airbnb_list1)]</local-name>
-            <parent-name>[airbnb_list1]</parent-name>
-            <remote-alias>Maximum Nights</remote-alias>
-            <ordinal>89</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>19</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Number of Reviews</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Number of Reviews (airbnb_list1)]</local-name>
-            <parent-name>[airbnb_list1]</parent-name>
-            <remote-alias>Number of Reviews</remote-alias>
-            <ordinal>90</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>19</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Review Scores Rating</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Review Scores Rating (airbnb_list1)]</local-name>
-            <parent-name>[airbnb_list1]</parent-name>
-            <remote-alias>Review Scores Rating</remote-alias>
-            <ordinal>91</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>17</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Cancellation Policy</remote-name>
-            <remote-type>129</remote-type>
-            <local-name>[Cancellation Policy (airbnb_list1)]</local-name>
-            <parent-name>[airbnb_list1]</parent-name>
-            <remote-alias>Cancellation Policy</remote-alias>
-            <ordinal>92</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <width>2147483647</width>
-            <contains-null>true</contains-null>
-            <cast-to-local-type>true</cast-to-local-type>
-            <collation flag='0' name='LEN_RUS' />
-            <attributes>
-              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
-            </attributes>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Reviews per Month</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[Reviews per Month (airbnb_list1)]</local-name>
-            <parent-name>[airbnb_list1]</parent-name>
-            <remote-alias>Reviews per Month</remote-alias>
-            <ordinal>93</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>17</precision>
-            <contains-null>true</contains-null>
-            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[airbnb_list_complete_015C555224704ED089E3B2C30746A510]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
           </metadata-record>
         </metadata-records>
       </connection>
       <aliases enabled='yes' />
-      <column caption='Accommodates (airbnb list1)' datatype='integer' name='[Accommodates (airbnb_list1)]' role='measure' type='quantitative' />
-      <column caption='Accommodates (airbnb list complete)' datatype='integer' name='[Accommodates (airbnb_list_complete)]' role='measure' type='quantitative' />
-      <column caption='Amenities (airbnb list1)' datatype='string' name='[Amenities (airbnb_list1)]' role='dimension' type='nominal' />
-      <column caption='Amenities (airbnb list complete)' datatype='string' name='[Amenities (airbnb_list_complete)]' role='dimension' type='nominal' />
-      <column caption='Bathrooms (airbnb list1)' datatype='real' name='[Bathrooms (airbnb_list1)]' role='measure' type='quantitative' />
-      <column caption='Bathrooms (airbnb list complete)' datatype='real' name='[Bathrooms (airbnb_list_complete)]' role='measure' type='quantitative' />
-      <column caption='Bed Type (airbnb list1)' datatype='string' name='[Bed Type (airbnb_list1)]' role='dimension' type='nominal' />
-      <column caption='Bed Type (airbnb list complete)' datatype='string' name='[Bed Type (airbnb_list_complete)]' role='dimension' type='nominal' />
-      <column caption='Bedrooms (airbnb list1)' datatype='real' name='[Bedrooms (airbnb_list1)]' role='measure' type='quantitative' />
-      <column caption='Bedrooms (airbnb list complete)' datatype='real' name='[Bedrooms (airbnb_list_complete)]' role='measure' type='quantitative' />
-      <column caption='Beds (airbnb list1)' datatype='real' name='[Beds (airbnb_list1)]' role='measure' type='quantitative' />
-      <column caption='Beds (airbnb list complete)' datatype='real' name='[Beds (airbnb_list_complete)]' role='measure' type='quantitative' />
       <column caption='M2' datatype='real' name='[Calculation_1363746325487128576]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='([Square Feet])/10.764' />
       </column>
-      <column caption='Cancellation Policy (airbnb list1)' datatype='string' name='[Cancellation Policy (airbnb_list1)]' role='dimension' type='nominal' />
-      <column caption='Cancellation Policy (airbnb list complete)' datatype='string' name='[Cancellation Policy (airbnb_list_complete)]' role='dimension' type='nominal' />
-      <column caption='City (airbnb list1)' datatype='string' name='[City (airbnb_list1)]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
-      <column caption='City (airbnb list complete)' datatype='string' name='[City (airbnb_list_complete)]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='Coste Total Medio' datatype='real' name='[Calculation_712694704573886464]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Price]+[Cleaning Fee]+[Security Deposit]' />
+      </column>
       <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
-      <column caption='Cleaning Fee (airbnb list1)' datatype='real' name='[Cleaning Fee (airbnb_list1)]' role='measure' type='quantitative' />
-      <column caption='Cleaning Fee (airbnb list complete)' datatype='real' name='[Cleaning Fee (airbnb_list_complete)]' role='measure' type='quantitative' />
-      <column caption='Country Code (airbnb list1)' datatype='string' name='[Country Code (airbnb_list1)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
-      <column caption='Country Code (airbnb list complete)' datatype='string' name='[Country Code (airbnb_list_complete)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
       <column datatype='string' name='[Country Code]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
-      <column caption='Extra People (airbnb list1)' datatype='integer' name='[Extra People (airbnb_list1)]' role='measure' type='quantitative' />
-      <column caption='Extra People (airbnb list complete)' datatype='integer' name='[Extra People (airbnb_list_complete)]' role='measure' type='quantitative' />
-      <column caption='Guests Included (airbnb list1)' datatype='integer' name='[Guests Included (airbnb_list1)]' role='measure' type='quantitative' />
-      <column caption='Guests Included (airbnb list complete)' datatype='integer' name='[Guests Included (airbnb_list_complete)]' role='measure' type='quantitative' />
-      <column aggregation='Avg' caption='Latitude (airbnb list1)' datatype='real' name='[Latitude (airbnb_list1)]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
-      <column aggregation='Avg' caption='Latitude (airbnb list complete)' datatype='real' name='[Latitude (airbnb_list_complete)]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
       <column aggregation='Avg' datatype='real' name='[Latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
-      <column aggregation='Avg' caption='Longitude (airbnb list1)' datatype='real' name='[Longitude (airbnb_list1)]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
-      <column aggregation='Avg' caption='Longitude (airbnb list complete)' datatype='real' name='[Longitude (airbnb_list_complete)]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
       <column aggregation='Avg' datatype='real' name='[Longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
-      <column caption='Maximum Nights (airbnb list1)' datatype='integer' name='[Maximum Nights (airbnb_list1)]' role='measure' type='quantitative' />
-      <column caption='Maximum Nights (airbnb list complete)' datatype='integer' name='[Maximum Nights (airbnb_list_complete)]' role='measure' type='quantitative' />
-      <column caption='Minimum Nights (airbnb list1)' datatype='integer' name='[Minimum Nights (airbnb_list1)]' role='measure' type='quantitative' />
-      <column caption='Minimum Nights (airbnb list complete)' datatype='integer' name='[Minimum Nights (airbnb_list_complete)]' role='measure' type='quantitative' />
-      <column caption='Neighbourhood Group Cleansed (airbnb list1)' datatype='string' name='[Neighbourhood Group Cleansed (airbnb_list1)]' role='dimension' type='nominal' />
-      <column caption='Neighbourhood Group Cleansed (airbnb list complete)' datatype='string' name='[Neighbourhood Group Cleansed (airbnb_list_complete)]' role='dimension' type='nominal' />
-      <column caption='Number of Reviews (airbnb list1)' datatype='integer' name='[Number of Reviews (airbnb_list1)]' role='measure' type='quantitative' />
-      <column caption='Number of Reviews (airbnb list complete)' datatype='integer' name='[Number of Reviews (airbnb_list_complete)]' role='measure' type='quantitative' />
-      <column caption='Price (airbnb list1)' datatype='real' name='[Price (airbnb_list1)]' role='measure' type='quantitative' />
-      <column caption='Price (airbnb list complete)' datatype='real' name='[Price (airbnb_list_complete)]' role='measure' type='quantitative' />
-      <column caption='Property Type (airbnb list1)' datatype='string' name='[Property Type (airbnb_list1)]' role='dimension' type='nominal' />
-      <column caption='Property Type (airbnb list complete)' datatype='string' name='[Property Type (airbnb_list_complete)]' role='dimension' type='nominal' />
-      <column caption='Review Scores Rating (airbnb list1)' datatype='real' name='[Review Scores Rating (airbnb_list1)]' role='measure' type='quantitative' />
-      <column caption='Review Scores Rating (airbnb list complete)' datatype='real' name='[Review Scores Rating (airbnb_list_complete)]' role='measure' type='quantitative' />
-      <column caption='Reviews per Month (airbnb list1)' datatype='real' name='[Reviews per Month (airbnb_list1)]' role='measure' type='quantitative' />
-      <column caption='Reviews per Month (airbnb list complete)' datatype='real' name='[Reviews per Month (airbnb_list_complete)]' role='measure' type='quantitative' />
-      <column caption='Room Type (airbnb list1)' datatype='string' name='[Room Type (airbnb_list1)]' role='dimension' type='nominal' />
-      <column caption='Room Type (airbnb list complete)' datatype='string' name='[Room Type (airbnb_list_complete)]' role='dimension' type='nominal' />
-      <column caption='Security Deposit (airbnb list1)' datatype='real' name='[Security Deposit (airbnb_list1)]' role='measure' type='quantitative' />
-      <column caption='Security Deposit (airbnb list complete)' datatype='real' name='[Security Deposit (airbnb_list_complete)]' role='measure' type='quantitative' />
-      <column caption='Smart Location (airbnb list1)' datatype='string' name='[Smart Location (airbnb_list1)]' role='dimension' type='nominal' />
-      <column caption='Smart Location (airbnb list complete)' datatype='string' name='[Smart Location (airbnb_list_complete)]' role='dimension' type='nominal' />
-      <column caption='Square Feet (airbnb list1)' datatype='real' name='[Square Feet (airbnb_list1)]' role='measure' type='quantitative' />
-      <column caption='Square Feet (airbnb list complete)' datatype='real' name='[Square Feet (airbnb_list_complete)]' role='measure' type='quantitative' />
-      <column caption='State (airbnb list1)' datatype='string' name='[State (airbnb_list1)]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
-      <column caption='State (airbnb list complete)' datatype='string' name='[State (airbnb_list_complete)]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='Neighbourhood Group Cleansed1' datatype='string' name='[Neighbourhood Group Cleansed]' role='dimension' type='nominal' />
+      <column caption='Property Type1' datatype='string' name='[Property Type]' role='dimension' type='nominal' />
+      <column caption='Room Type1' datatype='string' name='[Room Type]' role='dimension' type='nominal' />
       <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
-      <column caption='Street (airbnb list1)' datatype='string' name='[Street (airbnb_list1)]' role='dimension' type='nominal' />
-      <column caption='Street (airbnb list complete)' datatype='string' name='[Street (airbnb_list_complete)]' role='dimension' type='nominal' />
-      <column caption='Zipcode (airbnb list1)' datatype='string' name='[Zipcode (airbnb_list1)]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
-      <column caption='Zipcode (airbnb list complete)' datatype='string' name='[Zipcode (airbnb_list_complete)]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
-      <column datatype='string' name='[Zipcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
-      <_.fcp.ObjectModelTableType.true...column caption='airbnb_list' datatype='table' name='[__tableau_internal_object_id__].[airbnb_list_305EF2A284454EB084F56499A8CA8E41]' role='measure' type='quantitative' />
-      <_.fcp.ObjectModelTableType.true...column caption='airbnb_list_complete' datatype='table' name='[__tableau_internal_object_id__].[airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9]' role='measure' type='quantitative' />
-      <column caption='Index (Airbnb List1)' datatype='integer' name='[index (airbnb_list1)]' role='measure' type='quantitative' />
-      <column caption='Index (Airbnb List Complete)' datatype='integer' name='[index (airbnb_list_complete)]' role='measure' type='quantitative' />
+      <column caption='Zipcode1' datatype='string' name='[Zipcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='airbnb_list_complete' datatype='table' name='[__tableau_internal_object_id__].[airbnb_list_complete_015C555224704ED089E3B2C30746A510]' role='measure' type='quantitative' />
       <column caption='Index' datatype='integer' name='[index]' role='measure' type='quantitative' />
+      <group caption='Descripción emergente (Neighbourhood Group Cleansed,Zipcode)' hidden='true' name='[Tooltip (Neighbourhood Group Cleansed,Zipcode)]' name-style='unqualified' user:auto-column='sheet_link' user:ui-vit-column='true'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Neighbourhood Group Cleansed]' />
+          <groupfilter function='level-members' level='[Zipcode]' />
+        </groupfilter>
+      </group>
+      <group caption='Descripción emergente (Neighbourhood Group Cleansed1,Zipcode1)' hidden='true' name='[Tooltip (Neighbourhood Group Cleansed1,Zipcode1)]' name-style='unqualified' user:auto-column='sheet_link' user:ui-vit-column='true'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Neighbourhood Group Cleansed]' />
+          <groupfilter function='level-members' level='[Zipcode]' />
+        </groupfilter>
+      </group>
       <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='&quot;España&quot;' />
@@ -1592,154 +545,12 @@
       <date-options start-of-week='monday' />
       <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
         <objects>
-          <object caption='airbnb_list' id='airbnb_list_305EF2A284454EB084F56499A8CA8E41'>
+          <object caption='airbnb_list_complete' id='airbnb_list_complete_015C555224704ED089E3B2C30746A510'>
             <properties context=''>
-              <relation connection='postgres.1f8c0oq0yt0d9a1efl3hv1x3e3gr' name='airbnb_list' table='[public].[airbnb_list]' type='table' />
-            </properties>
-          </object>
-          <object caption='airbnb_list_complete' id='airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9'>
-            <properties context=''>
-              <relation join='inner' type='join'>
-                <clause type='join'>
-                  <expression op='='>
-                    <expression op='[airbnb_list_complete].[Accommodates]' />
-                    <expression op='[airbnb_list1].[Accommodates]' />
-                  </expression>
-                </clause>
-                <relation connection='postgres.1f8c0oq0yt0d9a1efl3hv1x3e3gr' name='airbnb_list_complete' table='[public].[airbnb_list_complete]' type='table' />
-                <relation connection='postgres.1f8c0oq0yt0d9a1efl3hv1x3e3gr' name='airbnb_list1' table='[public].[airbnb_list]' type='table' />
-              </relation>
+              <relation connection='postgres.1f8c0oq0yt0d9a1efl3hv1x3e3gr' name='airbnb_list_complete' table='[public].[airbnb_list_complete]' type='table' />
             </properties>
           </object>
         </objects>
-        <relationships>
-          <relationship>
-            <expression op='AND'>
-              <expression op='='>
-                <expression op='[Accommodates]' />
-                <expression op='[Accommodates (airbnb_list_complete)]' />
-              </expression>
-              <expression op='='>
-                <expression op='[Amenities]' />
-                <expression op='[Amenities (airbnb_list_complete)]' />
-              </expression>
-              <expression op='='>
-                <expression op='[Bathrooms]' />
-                <expression op='[Bathrooms (airbnb_list_complete)]' />
-              </expression>
-              <expression op='='>
-                <expression op='[Bed Type]' />
-                <expression op='[Bed Type (airbnb_list_complete)]' />
-              </expression>
-              <expression op='='>
-                <expression op='[Bedrooms]' />
-                <expression op='[Bedrooms (airbnb_list_complete)]' />
-              </expression>
-              <expression op='='>
-                <expression op='[Beds]' />
-                <expression op='[Beds (airbnb_list_complete)]' />
-              </expression>
-              <expression op='='>
-                <expression op='[Cancellation Policy]' />
-                <expression op='[Cancellation Policy (airbnb_list_complete)]' />
-              </expression>
-              <expression op='='>
-                <expression op='[City]' />
-                <expression op='[City (airbnb_list_complete)]' />
-              </expression>
-              <expression op='='>
-                <expression op='[Cleaning Fee]' />
-                <expression op='[Cleaning Fee (airbnb_list_complete)]' />
-              </expression>
-              <expression op='='>
-                <expression op='[Country Code]' />
-                <expression op='[Country Code (airbnb_list_complete)]' />
-              </expression>
-              <expression op='='>
-                <expression op='[Extra People]' />
-                <expression op='[Extra People (airbnb_list_complete)]' />
-              </expression>
-              <expression op='='>
-                <expression op='[Guests Included]' />
-                <expression op='[Guests Included (airbnb_list_complete)]' />
-              </expression>
-              <expression op='='>
-                <expression op='[index]' />
-                <expression op='[index (airbnb_list_complete)]' />
-              </expression>
-              <expression op='='>
-                <expression op='[Latitude]' />
-                <expression op='[Latitude (airbnb_list_complete)]' />
-              </expression>
-              <expression op='='>
-                <expression op='[Longitude]' />
-                <expression op='[Longitude (airbnb_list_complete)]' />
-              </expression>
-              <expression op='='>
-                <expression op='[Maximum Nights]' />
-                <expression op='[Maximum Nights (airbnb_list_complete)]' />
-              </expression>
-              <expression op='='>
-                <expression op='[Minimum Nights]' />
-                <expression op='[Minimum Nights (airbnb_list_complete)]' />
-              </expression>
-              <expression op='='>
-                <expression op='[Neighbourhood Group Cleansed]' />
-                <expression op='[Neighbourhood Group Cleansed (airbnb_list_complete)]' />
-              </expression>
-              <expression op='='>
-                <expression op='[Number of Reviews]' />
-                <expression op='[Number of Reviews (airbnb_list_complete)]' />
-              </expression>
-              <expression op='='>
-                <expression op='[Price]' />
-                <expression op='[Price (airbnb_list_complete)]' />
-              </expression>
-              <expression op='='>
-                <expression op='[Property Type]' />
-                <expression op='[Property Type (airbnb_list_complete)]' />
-              </expression>
-              <expression op='='>
-                <expression op='[Review Scores Rating]' />
-                <expression op='[Review Scores Rating (airbnb_list_complete)]' />
-              </expression>
-              <expression op='='>
-                <expression op='[Reviews per Month]' />
-                <expression op='[Reviews per Month (airbnb_list_complete)]' />
-              </expression>
-              <expression op='='>
-                <expression op='[Room Type]' />
-                <expression op='[Room Type (airbnb_list_complete)]' />
-              </expression>
-              <expression op='='>
-                <expression op='[Security Deposit]' />
-                <expression op='[Security Deposit (airbnb_list_complete)]' />
-              </expression>
-              <expression op='='>
-                <expression op='[Smart Location]' />
-                <expression op='[Smart Location (airbnb_list_complete)]' />
-              </expression>
-              <expression op='='>
-                <expression op='[Square Feet]' />
-                <expression op='[Square Feet (airbnb_list_complete)]' />
-              </expression>
-              <expression op='='>
-                <expression op='[State]' />
-                <expression op='[State (airbnb_list_complete)]' />
-              </expression>
-              <expression op='='>
-                <expression op='[Street]' />
-                <expression op='[Street (airbnb_list_complete)]' />
-              </expression>
-              <expression op='='>
-                <expression op='[Zipcode]' />
-                <expression op='[Zipcode (airbnb_list_complete)]' />
-              </expression>
-            </expression>
-            <first-end-point object-id='airbnb_list_305EF2A284454EB084F56499A8CA8E41' />
-            <second-end-point object-id='airbnb_list_complete_B5D8F8EEE595437AA9C492DFC0CDDBD9' />
-          </relationship>
-        </relationships>
       </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
     </datasource>
   </datasources>
@@ -1762,10 +573,10 @@
             </column>
             <column aggregation='Avg' datatype='real' name='[Latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
             <column aggregation='Avg' datatype='real' name='[Longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
-            <column datatype='string' name='[Neighbourhood Group Cleansed]' role='dimension' type='nominal' />
+            <column caption='Neighbourhood Group Cleansed1' datatype='string' name='[Neighbourhood Group Cleansed]' role='dimension' type='nominal' />
             <column datatype='real' name='[Price]' role='measure' type='quantitative' />
             <column datatype='real' name='[Square Feet]' role='measure' type='quantitative' />
-            <column datatype='string' name='[Zipcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
+            <column caption='Zipcode1' datatype='string' name='[Zipcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
             <column-instance column='[Calculation_1363746325487128576]' derivation='Avg' name='[avg:Calculation_1363746325487128576:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Latitude]' derivation='Avg' name='[avg:Latitude:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Longitude]' derivation='Avg' name='[avg:Longitude:qk]' pivot='key' type='quantitative' />
@@ -1852,17 +663,21 @@
             <column caption='M2' datatype='real' name='[Calculation_1363746325487128576]' role='measure' type='quantitative'>
               <calculation class='tableau' formula='([Square Feet])/10.764' />
             </column>
+            <column caption='Coste Total Medio' datatype='real' name='[Calculation_712694704573886464]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Price]+[Cleaning Fee]+[Security Deposit]' />
+            </column>
             <column datatype='real' name='[Cleaning Fee]' role='measure' type='quantitative' />
             <column aggregation='Avg' datatype='real' name='[Latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
             <column aggregation='Avg' datatype='real' name='[Longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
-            <column datatype='string' name='[Neighbourhood Group Cleansed]' role='dimension' type='nominal' />
+            <column caption='Neighbourhood Group Cleansed1' datatype='string' name='[Neighbourhood Group Cleansed]' role='dimension' type='nominal' />
             <column datatype='real' name='[Price]' role='measure' type='quantitative' />
-            <column datatype='string' name='[Property Type]' role='dimension' type='nominal' />
+            <column caption='Property Type1' datatype='string' name='[Property Type]' role='dimension' type='nominal' />
             <column datatype='real' name='[Review Scores Rating]' role='measure' type='quantitative' />
             <column datatype='real' name='[Security Deposit]' role='measure' type='quantitative' />
             <column datatype='real' name='[Square Feet]' role='measure' type='quantitative' />
-            <column datatype='string' name='[Zipcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
+            <column caption='Zipcode1' datatype='string' name='[Zipcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
             <column-instance column='[Calculation_1363746325487128576]' derivation='Avg' name='[avg:Calculation_1363746325487128576:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_712694704573886464]' derivation='Avg' name='[avg:Calculation_712694704573886464:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Cleaning Fee]' derivation='Avg' name='[avg:Cleaning Fee:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Latitude]' derivation='Avg' name='[avg:Latitude:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Longitude]' derivation='Avg' name='[avg:Longitude:qk]' pivot='key' type='quantitative' />
@@ -1909,26 +724,30 @@
               <tooltip column='[federated.13p2ko40vnb7r01a2wo401pwjjgt].[avg:Cleaning Fee:qk]' />
               <tooltip column='[federated.13p2ko40vnb7r01a2wo401pwjjgt].[avg:Security Deposit:qk]' />
               <text column='[federated.13p2ko40vnb7r01a2wo401pwjjgt].[none:Neighbourhood Group Cleansed:nk]' />
+              <tooltip column='[federated.13p2ko40vnb7r01a2wo401pwjjgt].[avg:Calculation_712694704573886464:qk]' />
             </encodings>
             <customized-tooltip>
               <formatted-text>
-                <run fontcolor='#787878'>Neighbourhood Group Cleansed:&#9;</run>
+                <run fontcolor='#787878'>Barrio:&#9;</run>
                 <run bold='true'><![CDATA[<[federated.13p2ko40vnb7r01a2wo401pwjjgt].[none:Neighbourhood Group Cleansed:nk]>]]></run>
                 <run>Æ&#10;</run>
-                <run fontcolor='#787878'>Zipcode:&#9;</run>
+                <run fontcolor='#787878'>C.P.:&#9;</run>
                 <run bold='true'><![CDATA[<[federated.13p2ko40vnb7r01a2wo401pwjjgt].[none:Zipcode:nk]>]]></run>
                 <run>Æ&#10;</run>
-                <run fontcolor='#787878'>Prom. Cleaning Fee:&#9;</run>
+                <run fontcolor='#787878'>Tarifa limpieza media:&#9;</run>
                 <run bold='true'><![CDATA[<[federated.13p2ko40vnb7r01a2wo401pwjjgt].[avg:Cleaning Fee:qk]>]]></run>
                 <run>Æ&#10;</run>
-                <run fontcolor='#787878'>Prom. Price:&#9;</run>
+                <run fontcolor='#787878'>Precio medio:&#9;</run>
                 <run bold='true'><![CDATA[<[federated.13p2ko40vnb7r01a2wo401pwjjgt].[avg:Price:qk]>]]></run>
                 <run>Æ&#10;</run>
-                <run fontcolor='#787878'>Prom. Security Deposit:&#9;</run>
+                <run fontcolor='#787878'>Fianza media:&#9;</run>
                 <run bold='true'><![CDATA[<[federated.13p2ko40vnb7r01a2wo401pwjjgt].[avg:Security Deposit:qk]>]]></run>
                 <run>Æ&#10;</run>
-                <run fontcolor='#787878'>Prom. Square Feet:&#9;</run>
-                <run bold='true'><![CDATA[<[federated.13p2ko40vnb7r01a2wo401pwjjgt].[avg:Calculation_1363746325487128576:qk]>]]></run>
+                <run bold='true'>Coste total medio:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.13p2ko40vnb7r01a2wo401pwjjgt].[avg:Calculation_712694704573886464:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true'><![CDATA[<Sheet name="Valoraciones" maxwidth="300" maxheight="300" filter="<All Fields>">]]></run>
+                <run>Æ&#10;&#10;&#10;</run>
               </formatted-text>
             </customized-tooltip>
             <style>
@@ -1958,11 +777,25 @@
             <datasource caption='airbnb_list (phmkeaeu)' name='federated.13p2ko40vnb7r01a2wo401pwjjgt' />
           </datasources>
           <datasource-dependencies datasource='federated.13p2ko40vnb7r01a2wo401pwjjgt'>
+            <column caption='Neighbourhood Group Cleansed1' datatype='string' name='[Neighbourhood Group Cleansed]' role='dimension' type='nominal' />
             <column datatype='real' name='[Review Scores Rating]' role='measure' type='quantitative' />
-            <column datatype='string' name='[Room Type]' role='dimension' type='nominal' />
+            <column caption='Room Type1' datatype='string' name='[Room Type]' role='dimension' type='nominal' />
+            <column caption='Zipcode1' datatype='string' name='[Zipcode]' role='dimension' semantic-role='[ZipCode].[Name]' type='nominal' />
             <column-instance column='[Room Type]' derivation='None' name='[none:Room Type:nk]' pivot='key' type='nominal' />
             <column-instance column='[Review Scores Rating]' derivation='Sum' name='[sum:Review Scores Rating:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
+          <filter class='categorical' column='[federated.13p2ko40vnb7r01a2wo401pwjjgt].[Tooltip (Neighbourhood Group Cleansed,Zipcode)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action - Valoraciones]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Neighbourhood Group Cleansed]' />
+              <groupfilter function='level-members' level='[Zipcode]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.13p2ko40vnb7r01a2wo401pwjjgt].[Tooltip (Neighbourhood Group Cleansed1,Zipcode1)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action - Valoraciones]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[Neighbourhood Group Cleansed]' />
+              <groupfilter function='level-members' level='[Zipcode]' />
+            </groupfilter>
+          </filter>
           <filter class='categorical' column='[federated.13p2ko40vnb7r01a2wo401pwjjgt].[none:Room Type:nk]'>
             <groupfilter function='level-members' level='[none:Room Type:nk]' />
           </filter>
@@ -1970,6 +803,8 @@
           <slices>
             <column>[federated.13p2ko40vnb7r01a2wo401pwjjgt].[sum:Review Scores Rating:qk]</column>
             <column>[federated.13p2ko40vnb7r01a2wo401pwjjgt].[none:Room Type:nk]</column>
+            <column>[federated.13p2ko40vnb7r01a2wo401pwjjgt].[Tooltip (Neighbourhood Group Cleansed,Zipcode)]</column>
+            <column>[federated.13p2ko40vnb7r01a2wo401pwjjgt].[Tooltip (Neighbourhood Group Cleansed1,Zipcode1)]</column>
           </slices>
           <aggregation value='true' />
         </view>
@@ -2013,7 +848,7 @@
         <column caption='M2' datatype='real' name='[Calculation_1363746325487128576]' role='measure' type='quantitative'>
           <calculation class='tableau' formula='([Square Feet])/10.764' />
         </column>
-        <column datatype='string' name='[Property Type]' role='dimension' type='nominal' />
+        <column caption='Property Type1' datatype='string' name='[Property Type]' role='dimension' type='nominal' />
         <column datatype='real' name='[Review Scores Rating]' role='measure' type='quantitative' />
         <column-instance column='[Calculation_1363746325487128576]' derivation='Avg' name='[avg:Calculation_1363746325487128576:qk]' pivot='key' type='quantitative' />
         <column-instance column='[Property Type]' derivation='None' name='[none:Property Type:nk]' pivot='key' type='nominal' />
@@ -2111,8 +946,8 @@
           </layout-options>
           <size maxheight='1150' minheight='1150' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='42' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98000' id='41' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='100000' id='48' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='47' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
                 <zone h='5250' id='34' type-v2='title' w='98400' x='800' y='1000'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -2244,7 +1079,7 @@
       </viewpoint>
       <simple-id uuid='{FCF1A5F4-9938-4F92-8F21-D195CA345B7B}' />
     </window>
-    <window class='dashboard' name='Dashboard 1'>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
       <viewpoints>
         <viewpoint name='Centro'>
           <zoom type='entire-view' />
@@ -2257,7 +1092,7 @@
       <active id='-1' />
       <simple-id uuid='{08866536-E983-4D77-A6A6-D9D22E030B3C}' />
     </window>
-    <window class='worksheet' maximized='true' name='Centro'>
+    <window class='worksheet' name='Centro'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -2713,95 +1548,553 @@
     </thumbnail>
     <thumbnail height='192' name='Dashboard 1' width='192'>
       iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
-      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
+      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
     </thumbnail>
     <thumbnail height='192' name='Mapa_precios' width='192'>
       iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
