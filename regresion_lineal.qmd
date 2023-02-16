@@ -10,9 +10,18 @@ author: data_T10
 Importamos la base de datos limpia, con las observaciones exclusivamente correspondientes a Madrid:
 
 ```{r}
-library(readr)
-barrios <- read_csv("barrios.csv")
-View(barrios)
+install.packages('RPostgreSQL')
+```
+
+```{r}
+library('RPostgreSQL')
+
+pg = dbDriver("PostgreSQL")
+
+con = dbConnect(pg, user="phmkeaeu", password="D-RiqEmcoViv8Sojo5L8ExxM9ufa0mkV",
+                 host="trumpet.db.elephantsql.com", port=5432, dbname="phmkeaeu")
+
+airbnb_list_complete = dbReadTable(con, "airbnb_list_complete")
 summary(airbnb_list_complete)
 
 ```
@@ -67,14 +76,14 @@ Importamos cvs de barrios y renta:
 
 ```{r}
 library(readr)
-barrios <- read_csv("barrios.csv")
-View(barrios)
+barrios <- read_csv("datos_renta.csv")
+View(datos_renta)
 ```
 
 La variable de referencia respecto a nuestra base de datos original es Neighbourhood.Cleansed Añadimos las nuevas columnas a nuestra base de datos inicial y repetimos proceso de dividir el dataset en dos.
 
 ```{r}
-df_madrid_renta = merge(x= airbnb_list_complete, y= barrios)
+df_madrid_renta = merge(x= airbnb_list_complete, y= datos_renta)
 ```
 
 ```{r}
